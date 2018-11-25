@@ -1,0 +1,36 @@
+﻿<ngx-spinner
+bdColor = "rgba(51, 51, 51, 0.8)"
+size = "large"
+color = "#fff"
+type = "ball-8bits"
+></ngx-spinner>
+<div id="mainContainer">
+    <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">DU Blog</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/create">Create</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/account">Account</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item">
+                    <a class="nav-link" style="cursor:pointer" id="logButton" (click)="LogOnOff()">Log off</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--<ngb-alert id="emailConfirmAlert" hidden="hidden" (close)="closeAlert()">
+        Please confirm your email.
+    </ngb-alert>-->
+    <router-outlet></router-outlet>
+</div>

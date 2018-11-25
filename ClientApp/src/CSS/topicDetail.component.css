@@ -1,0 +1,30 @@
+﻿h1 {
+    margin-right: 10px;
+    color: white;
+}
+
+div.col-xs-6 {
+    width: auto;
+    margin-right: 10px;
+}
+
+#ratingContainer {
+    bottom: 0;
+    right: 0;
+    position: relative;
+}
+
+#ratingParahraph {
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    color: white;
+}
+
+#mainContainer {
+    margin-top: 5px;
+}
+
+label{
+    color:white;
+}

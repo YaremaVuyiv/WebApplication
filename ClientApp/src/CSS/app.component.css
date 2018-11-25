@@ -1,0 +1,9 @@
+﻿#mainContainer {
+    background-image: url(../Images/galaxy.jpg);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size:cover, 100vh;
+    min-height:100vh;
+    min-width:100vw;
+    padding-bottom:20px;
+}

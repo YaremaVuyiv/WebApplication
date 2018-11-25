@@ -1,0 +1,50 @@
+﻿<div id="mainContainer" *ngIf="isDataLoaded" class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <h1>{{topic?.name}}</h1>
+        </div>
+        <div class="col-xs-6">
+            <button *ngIf="likeButtonShown" id="likeButton" class="btn btn-primary" (click)="likeClick()">
+                <i class="material-icons">thumb_{{upOrDown}}</i>
+            </button>
+
+        </div>
+        <div id="ratingContainer" class="col-xs-6">
+            <p id="ratingParahraph">{{topic?.rating}}</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <p>{{topic?.body}}</p>
+        </div>
+    </div>
+    <div>
+        <button *ngIf="canAccessAdminFields" class="btn btn-danger" (click)="deleteTopic()">Delete</button>
+    </div>
+    <div>
+        <form #commentForm="ngForm" novalidate (ngSubmit)="createComment()">
+            <div class="form-group">
+                <label for="comment">Enter your comment</label>
+                <input type="text" placeholder="your comment" class="form-control" [(ngModel)]="commentText" id="comment" name="comment" #comment="ngModel"
+                       required />
+            </div>
+            <input type="submit" class="btn btn-default" [disabled]="!commentForm.form.valid" />
+            <!--<button type="button" class="btn btn-default">Submit</button>-->
+        </form>
+    </div>
+    <hr />
+    <div>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let c of comments">
+                <div>
+                    <div class="float-right">
+                        <p><b>{{c?.time | date:'yyyy-MM-dd HH:mm'}}</b></p>
+                        <button *ngIf="canAccessAdminFields" class="btn btn-danger" (click)="deleteComment(c?.id)">Delete</button>
+                    </div>
+                    <p><b>{{c?.userName}} </b></p>
+                    <p>{{c?.text}}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
