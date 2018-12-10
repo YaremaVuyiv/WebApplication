@@ -2,7 +2,7 @@
 
 This web application is created to share some interesting topics (In this case, topic is some block of text with title). Unregistered users can only read topics, while registered users can create their own topics, like and comment all other topics. Also there is admin user, who can delete topics and their comments.
 
-Backend - Rest api using Asp.Net Core
+Backend - Rest api using Asp.Net Core with SOLID principles
 It has 4 controllers:
 1) Account controller for managing user account activity (login, logout, register etc.)
 2) Topic controller for managing topics (create, read, delete)
