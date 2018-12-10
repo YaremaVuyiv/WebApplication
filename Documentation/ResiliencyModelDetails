@@ -1,0 +1,29 @@
+1) login - POST requst: body {userName, password}; response: body {token}
+2) register - POST requset: body {userName, email, password}; response: body {token}
+3) recover password - POST request: body {email}; response: actionResult
+4) get user details - GET requset: headers{bearer token}; response: body {email, userName}
+5) change password - POST request: headers {bearer token}, body {email, newPassword}; response: actionResult
+6) create topic - POST request: headers {bearer token}, body {title, text}; response: actionResult
+7) get all topics - GET requst; response: body {topics array}
+8) get topic by id - GET request; response: body {topic}
+9) delete topic by admin - DELETE requset: headers{bearer token}; response: actionResult
+10) check if topic is already liked - GET request: headers{bearer token}; response: body {isLiked}
+11) change like status(dislike) - PUT request: headers{bearer token}; response: actionResult
+12) get all comments of selected topic - GET request; response: body {comments array}
+13) create new comment of selected topic - POST request: headers{bearer token}, body {text}; response: actionResult
+14) delete comment by admin - DELETE request: headers{bearer token}; response: actionResult
+
+15) create new user in database
+16) get user by claims/id from database
+17) change user in database
+18) get all topics from database
+19) get topic by id from database
+20) create new topic in database
+21) delete topic by id from database
+22) create new like in database
+23) get like by id from database
+24) change like by id in database
+25) get all likes from database
+26) get all comments from database
+27) create new comment in database
+28) delete comment by id from database
