@@ -85,18 +85,6 @@ namespace WebApplication.Controllers
             return BadRequest(result.Errors?.First()?.Description);
         }
 
-        /*[HttpGet("ConfirmEmail")]
-        [AllowAnonymous]
-        public async Task ConfirmEmail(string userId, string token)
-        {
-            var user = await _userManager.FindByIdAsync(userId);
-            var result = await _userManager.ConfirmEmailAsync(user, token);
-            if (result.Succeeded)
-            {
-                Response.Redirect("/confirmEmail");
-            }
-        }*/
-
         [HttpPost("forgotPassword")]
         [AllowAnonymous]
         public async Task ForgotPassword([FromBody]ForgotPasswordViewModel forgotPasswordModel)
@@ -116,13 +104,6 @@ namespace WebApplication.Controllers
                 }
             }
         }
-
-        /*[HttpGet("RecoverPassword")]
-        [AllowAnonymous]
-        public void RecoverPassword(string email, string token)
-        {
-            Response.Redirect("/?email=" + email + "&token=" + token);
-        }*/
 
         [HttpPost("RecoverPassword")]
         [AllowAnonymous]

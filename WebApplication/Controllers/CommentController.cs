@@ -57,7 +57,7 @@ namespace WebApplication.Controllers
         }
 
         [HttpPost]
-        public async Task AddComment([FromBody]CommentViewModel comment)
+        public async Task<IActionResult> AddComment([FromBody]CommentViewModel comment)
         {
             if (ModelState.IsValid)
             {
@@ -71,8 +71,12 @@ namespace WebApplication.Controllers
                     commentToAdd.UserId = user.Id;
                     commentToAdd.UserName = user.UserName;
                     await _commentRepository.AddComment(commentToAdd);
+
+                    return Ok();
                 }
             }
+
+            return BadRequest();
         }
 
         [HttpDelete("{id}")]
