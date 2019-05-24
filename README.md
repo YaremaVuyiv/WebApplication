@@ -27,3 +27,6 @@ Security is realized using Bearer JWT
 
 Website - 
 https://dublog.herokuapp.com/
+
+Mockup of the project -
+https://app.moqups.com/2m6ok4rAVM/view/page/a806f5bd0
