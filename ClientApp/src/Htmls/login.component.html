@@ -17,12 +17,12 @@
             <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
         </div>
         <div class="form-group">
-            <button class="btn btn-primary">Login</button>
-            <button (click)="registerClick()" class="btn btn-default">Register</button>
+            <button id="loginButton" class="btn btn-primary">Login</button>
+            <button id="registerButton" (click)="registerClick()" class="btn btn-default">Register</button>
         </div>
         <!--<div *ngIf="error" class="alert alert-danger">{{error}}</div>-->
         <div>
-            <a routerLink="/forgotPassword">forgot password?</a>
+            <a id="forgotPasswordButton" routerLink="/forgotPassword">forgot password?</a>
         </div>
     </form>
 </div>

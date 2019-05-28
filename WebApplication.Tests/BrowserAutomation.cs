@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebApplication
+namespace WebApplication.Tests
 {
-    public class BrowserAutomation
+    class BrowserAutomation
     {
         IWebDriver driver;
 
