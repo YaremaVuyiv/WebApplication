@@ -61,7 +61,7 @@ namespace WebApplication.Controllers
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, token = code }, Request.Scheme);
                     await _emailSender.SendEmailAsync(user.Email, "Confirm your account",
-                        $"Please confirm your account by clicking this link: <a href='{"https://dublog.herokuapp.com/confirmEmail/?userId=" + user.Id + "&token=" + code}'>link</a>");
+                        $"Please confirm your account by clicking this link: <a href='{"http://localhost:4200/confirmEmail?userId=" + user.Id + "&token=" + code}'>link</a>");
                     return Ok();
                 }
 

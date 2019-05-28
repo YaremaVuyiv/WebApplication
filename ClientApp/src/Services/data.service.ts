@@ -8,7 +8,7 @@ import { Http, Response, Headers, RequestOptions, URLSearchParams } from '@angul
 @Injectable()
 export class DataService {
 
-    private url = "https://webapplication20181123085342.azurewebsites.net/api/topics";
+    private url = "http://localhost:62886/api/topics";
     headers: Headers;
     options: RequestOptions;
 

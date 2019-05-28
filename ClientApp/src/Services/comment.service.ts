@@ -21,7 +21,7 @@ export class CommentService {
         this.options = new RequestOptions({ headers: this.headers });
     }
 
-    private url = "https://webapplication20181123085342.azurewebsites.net/api/comment";
+    private url = "http://localhost:62886/api/comment";
 
     getAllComments(topicId: number) {
         return this.http.get(this.url + '/' + topicId, this.options).toPromise().then(response => {

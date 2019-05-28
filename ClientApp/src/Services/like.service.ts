@@ -7,7 +7,7 @@ import { Http, Response, Headers, RequestOptions, URLSearchParams } from '@angul
 @Injectable()
 export class LikeService {
 
-    private url = "https://webapplication20181123085342.azurewebsites.net/api/likes";
+    private url = "http://localhost:62886/api/likes";
 
     headers: Headers;
     options: RequestOptions;

@@ -34,7 +34,7 @@ namespace WebApplication
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationContext>(options =>
-            options.UseSqlServer("Server=tcp:destroyuniverseblog20181123040217dbserver.database.windows.net,1433;Initial Catalog=usersstoredb;Persist Security Info=False;User ID=yaremavuyiv;Password=1111QQqq;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
+            options.UseSqlServer(@"Server=localhost\SQLEXPRESS;Initial Catalog=usersstoredb;Trusted_Connection=True;"));
             //options.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=usersstoredb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
             services.AddIdentity<User, IdentityRole>(options =>
             {
